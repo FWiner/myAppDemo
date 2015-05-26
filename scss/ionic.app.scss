@@ -1,0 +1,143 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+$positive:                        #7676BC !default;
+
+$start: #12ACC8;
+$end: #096474;
+$sideBg: #014854;
+
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+//common.sass----------------------------start
+
+$no-bg: rgba(255, 255, 255, 0);
+$box-shadow : 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+.brd50{
+  border-radius: 50%;
+}
+.float-right{
+  float: right;
+}
+
+.gradient-bg {
+  background-image:-webkit-linear-gradient(top, $start, $end);
+  background-image:linear-gradient(top,$start,$end);
+}
+
+.no-bg{
+  background: $no-bg;
+  button{
+    color: $light;
+    &:hover{
+      color: $light;
+    }
+  }
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @extend .gradient-bg;
+}
+
+//common.sass----------------------------end
+
+//menu.html.sass----------------------------start
+
+.sideBg{
+  background: $sideBg;
+}
+
+.person{
+  padding-top: 8%;
+  padding-bottom: 4%;
+  img{
+    @extend .brd50;
+    width: 50%;
+  }
+  h2{
+    color: $light;
+  }
+}
+
+.pList{
+  >li:first-child{
+    border-top-width: 0;
+  }
+  li{
+    background: $no-bg;
+    color: $light;
+    border-color: #666;
+    img{
+      height: 70%!important;
+      top: 15%!important;
+    }
+  }
+}
+
+
+//menu.html.sass----------------------------end
+
+//home.html.sass----------------------------satart
+
+
+.dashbord{
+  .mrgtp{
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .row{
+    padding:2% 8%;
+    .card{
+      margin: 0;
+      box-shadow: $box-shadow;
+      .item{
+        border-width: 0;
+      }
+      .item-image{
+        padding-top: 10%;
+        img{
+          width: 70%!important;
+        }
+      }
+      .item-text-wrap{
+        padding-top: 2%;
+        font-size: 14px;
+      }
+    }
+  }
+}
+//home.html.sass----------------------------end

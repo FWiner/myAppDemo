@@ -1,0 +1,100 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content scroll="true" class="sideBg">
+        <ul class="list pList">
+            <li class="item">
+                <div class="person text-center">
+                    <img ng-src="./img/person_logo.png">
+                    <h2>王晓阳</h2>
+                </div>
+            </li>
+            <li class="item item-icon-left item-icon-right menu-close" ng-click="login()">
+                <img class="icon" ng-src="./img/home_icon.png">
+                首页
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+            <li class="item item-icon-left item-icon-right menu-close">
+                <img class="icon" ng-src="./img/safe_center.png">
+                安全中心
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+            <li class="item item-icon-left item-icon-right menu-close">
+                <img class="icon" ng-src="./img/setting.png">
+                个人中心
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+            <li class="item item-icon-left item-icon-right menu-close">
+                <img class="icon" ng-src="./img/about_us.png">
+                关于我们
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+            <li class="item item-icon-left item-icon-right menu-close">
+                <img class="icon" ng-src="./img/check_update.png">
+                版本更新
+                <span class="float-right">V1.2.3</span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </li>
+        </ul>
+        <div class="row padding-horizontal">
+            <button class="button button-outline button-block button-balanced">
+                注销登录
+            </button>
+        </div>
+    </ion-content>
+  </ion-side-menu>
+    <ion-side-menu side="right">
+        <ion-content scroll="true" class="sideBg">
+            <ul class="list pList">
+                <li class="item">
+                    <div class="person text-center">
+                        <img ng-src="./img/person_logo.png">
+                        <h2>王晓阳</h2>
+                    </div>
+                </li>
+                <li class="item item-icon-left item-icon-right menu-close">
+                    <img class="icon" ng-src="./img/home_icon.png">
+                    首页
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-left item-icon-right menu-close">
+                    <img class="icon" ng-src="./img/safe_center.png">
+                    安全中心
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-left item-icon-right menu-close">
+                    <img class="icon" ng-src="./img/setting.png">
+                    个人中心
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-left item-icon-right menu-close">
+                    <img class="icon" ng-src="./img/about_us.png">
+                    关于我们
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+                <li class="item item-icon-left item-icon-right menu-close">
+                    <img class="icon" ng-src="./img/check_update.png">
+                    版本更新
+                    <span class="float-right">V1.2.3</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+            </ul>
+            <div class="row padding-horizontal">
+                <button class="button button-outline button-block button-balanced">
+                    注销登录
+                </button>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
