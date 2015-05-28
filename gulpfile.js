@@ -29,7 +29,7 @@ gulp.task('default', ['clean', 'sass', 'templatecache', 'minifyjs']);
 
 //clean
 gulp.task('clean', function() {
-    return gulp.src(['./www/dist/js/main.min.js','./www/dist/css/ionic.app.min.css'], {read: false})
+    return gulp.src(['./www/dist'], {read: false})
         .pipe(clean({force: true}));
 });
 
@@ -40,7 +40,7 @@ gulp.task('clean', function() {
 gulp.task('minifyjs',['templatecache'], function() {
     return gulp.src(['./www/js/**/*.js'])
         .pipe(ngmin({dynamic: false}))
-//        .pipe(stripDebug())
+//        .pipe(stripDebug())     if prod pls open
         .pipe(uglify({outSourceMap: false}))
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest('./www/dist/js'))
@@ -58,7 +58,7 @@ gulp.task('sass', function(done) {
             keepSpecialComments: 0
         }))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./www/dist/css/'))
+        .pipe(gulp.dest('./www/dist/css'))
         .on('end', done);
 });
 
@@ -75,7 +75,6 @@ gulp.task('templatecache', function (done) {
         .pipe(gulp.dest('./www/js'))
         .on('end', done);
 });
-
 
 
 //watch the change
